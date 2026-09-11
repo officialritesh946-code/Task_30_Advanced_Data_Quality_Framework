@@ -1,0 +1,15 @@
+{
+  "project": "Task 30 - Advanced Data Quality Framework",
+  "runtime": "Python 3.10+",
+  "dependency_install": "pip install -r requirements.txt",
+  "entrypoint": "python src/validation.py",
+  "input": "data/dirty_cafe_sales.csv",
+  "rules": "config/validation_rules.json",
+  "outputs": {
+    "quality_summary": "reports/quality_report.csv",
+    "rule_results": "reports/validation_results.csv",
+    "error_log": "logs/error_log.csv"
+  },
+  "failure_policy": "Do not publish a recurring dataset as valid when any configured validation rule fails.",
+  "source_data_policy": "Read-only validation; source data is not modified."
+}

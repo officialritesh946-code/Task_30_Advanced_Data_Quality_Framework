@@ -1,0 +1,22 @@
+rule_id,rule_name,status,checked_rows,failed_rows,pass_rate_pct,message
+DQ-REQ-TRA,Required field: Transaction ID,PASS,10000,0,100.0,No missing values.
+DQ-REQ-ITE,Required field: Item,FAIL,10000,333,96.67,333 missing value(s) found.
+DQ-REQ-QUA,Required field: Quantity,FAIL,10000,138,98.62,138 missing value(s) found.
+DQ-REQ-PRI,Required field: Price Per Unit,FAIL,10000,179,98.21,179 missing value(s) found.
+DQ-REQ-TOT,Required field: Total Spent,FAIL,10000,173,98.27,173 missing value(s) found.
+DQ-REQ-PAY,Required field: Payment Method,FAIL,10000,2579,74.21,2579 missing value(s) found.
+DQ-REQ-LOC,Required field: Location,FAIL,10000,3265,67.35,3265 missing value(s) found.
+DQ-REQ-TRA,Required field: Transaction Date,FAIL,10000,159,98.41,159 missing value(s) found.
+DQ-KEY-001,Primary key uniqueness,PASS,10000,0,100.0,All IDs are unique.
+DQ-DUP-001,Duplicate rows,PASS,10000,0,100.0,No duplicate rows.
+DQ-NUM-QUANTITY,Numeric type: Quantity,FAIL,10000,479,95.21,479 non-numeric/missing value(s).
+DQ-NUM-PRICE_PER_,Numeric type: Price Per Unit,FAIL,10000,533,94.67,533 non-numeric/missing value(s).
+DQ-NUM-TOTAL_SPEN,Numeric type: Total Spent,FAIL,10000,502,94.98,502 non-numeric/missing value(s).
+DQ-POS-QUANTITY,Positive value: Quantity,PASS,9521,0,100.0,All numeric values are positive.
+DQ-POS-PRICE_PER_,Positive value: Price Per Unit,PASS,9467,0,100.0,All numeric values are positive.
+DQ-POS-TOTAL_SPEN,Positive value: Total Spent,PASS,9498,0,100.0,All numeric values are positive.
+DQ-CAT-ITEM,Allowed values: Item,FAIL,10000,969,90.31,969 invalid/missing category value(s).
+DQ-CAT-PAYMENT_ME,Allowed values: Payment Method,FAIL,10000,3178,68.22,3178 invalid/missing category value(s).
+DQ-CAT-LOCATION,Allowed values: Location,FAIL,10000,3961,60.39,3961 invalid/missing category value(s).
+DQ-DATE-TRANSACTIO,Valid date: Transaction Date,FAIL,10000,460,95.4,460 invalid/missing date(s).
+DQ-BIZ-001,Total Spent = Quantity × Price Per Unit,PASS,8544,0,100.0,All eligible rows satisfy the calculation rule.

@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "name": "dirty_cafe_sales.csv",
+    "expected_rows": 10000,
+    "primary_key": "Transaction ID"
+  },
+  "required_fields": [
+    "Transaction ID",
+    "Item",
+    "Quantity",
+    "Price Per Unit",
+    "Total Spent",
+    "Payment Method",
+    "Location",
+    "Transaction Date"
+  ],
+  "numeric_fields": [
+    "Quantity",
+    "Price Per Unit",
+    "Total Spent"
+  ],
+  "positive_fields": [
+    "Quantity",
+    "Price Per Unit",
+    "Total Spent"
+  ],
+  "allowed_values": {
+    "Item": [
+      "Coffee",
+      "Cake",
+      "Cookie",
+      "Salad",
+      "Juice",
+      "Sandwich",
+      "Smoothie",
+      "Tea"
+    ],
+    "Payment Method": [
+      "Cash",
+      "Credit Card",
+      "Digital Wallet"
+    ],
+    "Location": [
+      "In-store",
+      "Takeaway"
+    ]
+  },
+  "date_fields": [
+    "Transaction Date"
+  ],
+  "business_rules": [
+    {
+      "name": "total_spent_equals_quantity_times_price",
+      "description": "Total Spent must equal Quantity \u00d7 Price Per Unit when all three values are numeric.",
+      "tolerance": 0.01
+    }
+  ]
+}
